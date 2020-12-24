@@ -13,7 +13,7 @@
 // Definitions
 #define IRC_SERVER   "irc.chat.twitch.tv"
 #define IRC_PORT     80
-#define TWITCH_OAUTH_TOKEN "oauth:"
+//#define TWITCH_OAUTH_TOKEN TWITCH_OAUTH_TOKEN
 #define TWITCH_BOT_NAME "ESP32Bot"
 
 #define LED 16
