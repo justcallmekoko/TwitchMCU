@@ -62,7 +62,7 @@ int x = matrix.width();
 int mess_len = 0;
 String ticker_message = "Hello, World!";
 
-int current_pattern = LOAD_RING;
+int current_pattern = TWINKLE;
 
 float scanning[3] = {255, 6, 0};
 float deauthing[3] = {255, 6, 0};
@@ -326,6 +326,11 @@ void parseCommand(String command) {
   JsonObject& json = jsonBuffer.parseObject(command);
   if (!json.success()) {
     Serial.println("Could not parse json: " + (String)command);
+    Serial.println("Must be a string message. Sending to LED: " + (String)command);
+    ticker_message = command;
+    matrix.setTextColor(matrix.Color(random(100, 255), random(100, 255), random(100, 255)));
+    current_pattern = MSG;
+    matrix.fillScreen(0);
   }
   else {
     Serial.println("Successfully parsed json: " + (String)command);
@@ -336,12 +341,12 @@ void parseCommand(String command) {
       matrix.fillScreen(0);
       matrix.show();
     }
-    else if (json.containsKey("msg")) {
-      ticker_message = json["msg"].as<String>();
-      matrix.setTextColor(matrix.Color(random(0, 255), random(0, 255), random(0, 255)));
-      current_pattern = MSG;
-      matrix.fillScreen(0);
-    }
+//    else if (json.containsKey("msg")) {
+//      ticker_message = json["msg"].as<String>();
+//      matrix.setTextColor(matrix.Color(random(0, 255), random(0, 255), random(0, 255)));
+//      current_pattern = MSG;
+//      matrix.fillScreen(0);
+//    }
   }
 }
 
