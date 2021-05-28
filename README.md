@@ -17,6 +17,14 @@ If the camera is pointed at a thermal receipt printer, the following commands ap
 | ---------------- | ---------------------- | ------------------------ |
 | `Cheer10 msg`    | Replace 'msg' with your cheer message | Thermal printer will print the cheer message (Cheer must be >10) |
 
+## Raspberry Pi Commands
+| Command | Notes | Results |
+| ------- | ----- | ------- |
+| !help   | !h    | Get sent here |
+| !discord | !d   | Receive an invite link to the discord |
+| !socials | !s   | Receive links to my social media |
+| !test | !t      | Get a cool hat |
+
 ## LED Panel Stream
 If the camera is pointed at an LED panel, the following commands apply
 ### Commands
