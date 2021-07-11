@@ -19,6 +19,13 @@ This is a thing that does stuff. Type commands in Twitch Chat during the stream 
 | !giveaway | !g  | Check if there is a giveaway running |
 | !ticket | !tk   | Get your ticket for the giveaway |
 
+### Admin Commands
+| Command | Notes | Results |
+| ------- | ----- | ------- |
+| !startgiveaway | !sg | Start a giveaway with specified name |
+| !stopgiveaway | !spg | Stop the current giveaway |
+| !pickwinner | !pw | Pick a winner for the current giveaway |
+
 ## Thermal Printer Stream
 If the camera is pointed at a thermal receipt printer, the following commands apply
 
